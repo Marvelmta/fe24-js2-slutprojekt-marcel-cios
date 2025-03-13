@@ -28964,9 +28964,10 @@ function renderTasks(tasks) {
         "in progress": "inProgressTasks",
         "done": "completedTasks"
     };
-    Object.keys(columns).forEach((status)=>{
-        const columnElement = document.getElementById(columns[status]);
-        if (columnElement) columnElement.innerHTML = `<h2>${capitalizeFirstLetter(status)}</h2>`;
+    // Update column headers explicitly
+    Object.entries(columns).forEach(([status, columnId])=>{
+        const columnElement = document.getElementById(columnId);
+        if (columnElement) columnElement.innerHTML = `<h2>${status === "done" ? "Completed" : capitalizeFirstLetter(status)}</h2>`;
     });
     const teamMembers = JSON.parse(localStorage.getItem("teamMembers") || "[]");
     const filterMember = document.getElementById("filterMember").value;

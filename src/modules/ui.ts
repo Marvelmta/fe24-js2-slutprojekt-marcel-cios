@@ -40,12 +40,13 @@ export function renderTeamMembers(teamMembers: TeamMember[]) {
 export function renderTasks(tasks: Task[]) {
   const columns = { "new": "newTasks", "in progress": "inProgressTasks", "done": "completedTasks" };
 
-  Object.keys(columns).forEach(status => {
-    const columnElement = document.getElementById(columns[status]);
-    if (columnElement) {
-      columnElement.innerHTML = `<h2>${capitalizeFirstLetter(status)}</h2>`;
-    }
-  });
+// Update column headers explicitly
+Object.entries(columns).forEach(([status, columnId]) => {
+  const columnElement = document.getElementById(columnId);
+  if (columnElement) {
+    columnElement.innerHTML = `<h2>${status === "done" ? "Completed" : capitalizeFirstLetter(status)}</h2>`;
+  }
+});
 
   const teamMembers = JSON.parse(localStorage.getItem("teamMembers") || "[]") as TeamMember[];
   const filterMember = (document.getElementById("filterMember") as HTMLSelectElement).value;
