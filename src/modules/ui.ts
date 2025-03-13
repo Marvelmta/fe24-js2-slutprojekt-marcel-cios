@@ -37,6 +37,7 @@ export function renderTeamMembers(teamMembers: TeamMember[]) {
   console.log("Rendered team members:", teamMembers);
 }
 
+// Chat GPT hjälpte med den här funktionen - Kunde inte få saker att filtrera på rätt sätt
 export function renderTasks(tasks: Task[]) {
   const columns = { "new": "newTasks", "in progress": "inProgressTasks", "done": "completedTasks" };
 
