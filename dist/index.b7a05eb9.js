@@ -28964,7 +28964,6 @@ function renderTasks(tasks) {
         "in progress": "inProgressTasks",
         "done": "completedTasks"
     };
-    // Update column headers explicitly
     Object.entries(columns).forEach(([status, columnId])=>{
         const columnElement = document.getElementById(columnId);
         if (columnElement) columnElement.innerHTML = `<h2>${status === "done" ? "Completed" : capitalizeFirstLetter(status)}</h2>`;

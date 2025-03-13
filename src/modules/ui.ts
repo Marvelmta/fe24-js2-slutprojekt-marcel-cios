@@ -40,7 +40,7 @@ export function renderTeamMembers(teamMembers: TeamMember[]) {
 export function renderTasks(tasks: Task[]) {
   const columns = { "new": "newTasks", "in progress": "inProgressTasks", "done": "completedTasks" };
 
-// Update column headers explicitly
+
 Object.entries(columns).forEach(([status, columnId]) => {
   const columnElement = document.getElementById(columnId);
   if (columnElement) {
