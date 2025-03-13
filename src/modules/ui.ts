@@ -119,6 +119,7 @@ function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+//Chat GPT - Ändra formatet på datum och tid
 function formatDate(timestamp: string) {
   const date = new Date(timestamp);
   const day = String(date.getDate()).padStart(2, "0");
