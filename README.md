@@ -4,5 +4,6 @@ The Scrum Board system is a task management application built with HTML, TypeScr
 
 ## Features
 
-- **Task Management**: Users can create and assign tasks, once assigned mark as done and finally removed.
-- **Member Management**: Add members
+- **Task Management**: Users can create and assign tasks, once assigned the tasks can be marked as done and finally removed.
+- **Member Management**: Add members and give them specific roles. Members can only be assigned to tasks that match their roles.
+- **Filtering**: Filter tasks by Members, Roles(Categories). Possibility of filtering by Alphabetical order and Date.
