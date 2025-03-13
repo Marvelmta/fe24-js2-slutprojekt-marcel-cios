@@ -1,0 +1,24 @@
+{
+  "name": "parcel-mall",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --dist-dir docs --public-url ./",
+    "clean": "del-cli ./.parcel-cache ./docs ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/firebase": "^2.4.32",
+    "buffer": "^6.0.3",
+    "del-cli": "^6.0.0",
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@firebase/firestore": "^4.7.9",
+    "firebase": "^11.4.0"
+  }
+}
