@@ -1,4 +1,4 @@
-import { db } from "./firebaseConfig";
+import { db } from "./firebaseconfig";
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from "firebase/firestore";
 
 export class FirebaseService {
